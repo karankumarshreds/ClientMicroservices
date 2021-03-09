@@ -15,6 +15,8 @@ This is where `webpack` comes into picture.
 
 _Webpack combines many javascript files into a single file which is usually called as 'bundle.js' or 'main.js'._
 
+<p align="center" width="500"><img src="https://webpack.github.io/assets/what-is-webpack.png"/></p>
+
 Webpack config for development (needs to be there in the project folder):
 
 ```js
