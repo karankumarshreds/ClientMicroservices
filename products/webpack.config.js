@@ -3,6 +3,9 @@
 // index.html file in the script tags
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// module federation plugin here spits out a set of files
+// that includes the set of direction and src files
+// that can be consumed by the other projects
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
