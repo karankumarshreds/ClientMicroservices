@@ -20,6 +20,8 @@ module.exports = {
       template: './public/index.html',
     }),
     new ModuleFederationPlugin({
+      // name of the bundle (used from the host)
+      // like 'products@http://localhost:8081/remoteEntry.js'
       name: 'products',
       // contains the list of files that are available
       // from the project + directions on how to load
@@ -31,8 +33,13 @@ module.exports = {
       // folder
       filename: 'remoteEntry.js',
       exposes: {
-        // version of src/index.js file that can be loaded
-        // into the browser
+        // which files we want to export to the
+        // outside world
+        /**
+         * ProductsIndex is the name of the module that
+         * the other projects will import
+         * And if they do, we will give them src/index
+         */
         './ProductsIndex': './src/index',
       },
     }),

@@ -12,7 +12,8 @@ module.exports = {
       template: './public/index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'container',
+      name: 'container', // name is not necessary for the host
+      // it is only used by the host to connect to the remotes
       remotes: {
         // connecting to the file (consuming the file)
         products: 'products@http://localhost:8081/remoteEntry.js',
