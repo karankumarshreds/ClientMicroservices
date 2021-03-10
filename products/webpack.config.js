@@ -1,4 +1,4 @@
-// this will take all the webpack rendered/bundled
+// this will take all the local webpack rendered/bundled
 // javascript files and import it in the public
 // index.html file in the script tags
 const HtmlWebpackPlugin = require('html-webpack-plugin');
