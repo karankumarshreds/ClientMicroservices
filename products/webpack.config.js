@@ -18,10 +18,18 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
       name: 'products',
-      filename: 'remoteEntry.js', // name by which the build will be consumed
+      // contains the list of files that are available
+      // from the project + directions on how to load
+      // them
+      // consumed by the other projects
+      // other projects will use this file to load the
+      // index.js/other files generated for the extra
+      // imports that are being used in the products/src
+      // folder
+      filename: 'remoteEntry.js',
       exposes: {
-        // name of the module (=== products/ProductsIndex)
-        // how it will be imported in the host (container)
+        // version of src/index.js file that can be loaded
+        // into the browser
         './ProductsIndex': './src/index',
       },
     }),
