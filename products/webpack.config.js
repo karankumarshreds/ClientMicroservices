@@ -3,6 +3,8 @@
 // index.html file in the script tags
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+
 module.exports = {
   mode: 'development',
   // adding below line to take the built main.js/bundle.js
@@ -13,6 +15,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    new ModuleFederationPlugin({
+      name: 'products',
+      filename: 'remoteEntry.js', // name by which the build will be consumed
+      exposes: {
+        // name of the module (=== products/ProductsIndex)
+        // how it will be imported in the host (container)
+        './ProductsIndex': './src/index',
+      },
     }),
   ],
 };
