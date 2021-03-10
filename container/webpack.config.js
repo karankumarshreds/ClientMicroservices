@@ -17,6 +17,7 @@ module.exports = {
       remotes: {
         // connecting to the file (consuming the file)
         products: 'products@http://localhost:8081/remoteEntry.js',
+        cart: 'cart@http://localhost:8082/remoteEntry.js',
       },
     }),
   ],
