@@ -39,6 +39,9 @@ module.exports = {
          * ProductsIndex is the name of the module that
          * the other projects will import
          * And if they do, we will give them src/index
+         * think of it as an alias so that the container
+         * or any other project does not need to write
+         * import src/index etc..
          */
         './ProductsIndex': './src/index',
       },
