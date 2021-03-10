@@ -8,4 +8,4 @@ for (let i = 0; i < 3; i++) {
   products += `<li>${name}</li>`;
 }
 
-console.log(products);
+document.querySelector('#dev-products').innerHTML = products;

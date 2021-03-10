@@ -1,3 +1,8 @@
+// this will take all the webpack rendered/bundled
+// javascript files and import it in the public
+// index.html file in the script tags
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   // adding below line to take the built main.js/bundle.js
@@ -5,6 +10,11 @@ module.exports = {
   devServer: {
     port: 8081,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+  ],
 };
 
 /**
