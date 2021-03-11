@@ -45,6 +45,17 @@ module.exports = {
          */
         './ProductsIndex': './src/index',
       },
+      // this tells the consumer that this module might be
+      // shared ie. in case other service is also using
+      // the same module then do not import it twice
+      // **NOTE**: This causes the import of the module
+      // inside the product project to be asynchronous
+      // which will give an error if loaded directly
+      // ***********************************************
+      // This will not give an error if it is being loaded
+      // in some other product because that is not loaded
+      // instantaneously
+      shared: ['faker'],
     }),
   ],
 };
