@@ -15,3 +15,9 @@
  * multiple times
  */
 import('./bootstrap');
+
+// ******* IN SHORT ********
+/*
+ * Use this indirect imports if you want to load
+ * all the modules before running the code
+ */
