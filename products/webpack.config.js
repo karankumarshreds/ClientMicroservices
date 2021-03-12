@@ -43,7 +43,7 @@ module.exports = {
          * or any other project does not need to write
          * import src/index etc..
          */
-        './ProductsIndex': './src/index',
+        './ProductsIndex': './src/bootstrap',
       },
       // this tells the consumer that this module might be
       // shared ie. in case other service is also using

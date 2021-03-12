@@ -2,7 +2,7 @@ import faker from 'faker';
 
 // decided where we want to mount the products
 // inside of the index.html
-const mount = (el) => {
+export const mount = (el) => {
   let products = '';
 
   for (let i = 0; i < 3; i++) {
